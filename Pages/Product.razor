@@ -4,6 +4,7 @@
        <div className="product-details-container">
          <form className="product-details" onSubmit={handleSubmit}>
            <h1>Product Details</h1>
+           <div className="product-details-left">
            <div className="product-name">
                <div className="product-name-label">
                  <label htmlFor="productName">Product Name</label>
@@ -21,7 +22,108 @@
                 <input value="@companyname" @onchange="setCompanyName" />
                </div>
             </div>
+
+            <div className="product-category">
+               <div className="product-category-label">
+                 <label htmlFor="productCategory">Product Category</label>
+               </div>
+               <div className="product-category-text">
+                <input value="@productcategory" @onchange="setProductCategory" />
+               </div>
+            </div>
+            <div className="Licence-Type">
+               <div className="Licence-Type-Label">
+                 <label htmlFor="LicenceType">Licence Type</label>
+               </div>
+               <div className="Licence-Type-Text">
+                 <input value="@licensetype" @onchange="setLicenseType" />
+               </div>
+             </div>
+             <div className="product-price">
+               <div className="product-price-label">
+                 <label htmlFor="productPrice">Product Price</label>
+               </div>
+               <div className="product-price-text">
+                 <input value="@productprice" @onchange="setProductPrice" />
+               </div>
+             </div>
+             <div className="product-currency">
+               <div className="product-currency-label">
+                 <label htmlFor="productCurrency">Product Currency</label>
+               </div>
+               <div className="product-currency-text">
+                 <input value="@productcurrency" @onchange="setProductCurrency" />
+               </div>
+             </div>
+             <div className="product-quantity">
+               <div className="product-quantity-label">
+                 <label htmlFor="productQuantity">Product Quantity</label>
+               </div>
+               <div className="product-quantity-text">
+                 <input value="@productquantity" @onchange="setProductQuantity" />
+               </div>
+             </div>
+             </div>
+
+            <div className="product-details-right">
+                    <div className="product-supplier">
+               <div className="product-supplier-label">
+                 <label htmlFor="productSupplier">Product Supplier</label>
+               </div>
+               <div className="product-supplier-text">
+                 <input value="@productsupplier" @onchange="setProductSupplier" />
+               </div>
+               </div>
+               <div className="product-availabilitystatus">
+               <div className="product-availabilitystatus-label">
+                 <label htmlFor="productAvailabilityStatus">Product Availability Status</label>
+                 </div>
+                 <div className="product-availabilitystatus-text">
+                    <input value="@productavailability" @onchange="setProductAvailabilityStatus" />
+                 </div>
+                 </div>
+                 <div className="product-deliveryOptions">
+               <div className="product-deliveryOptions-label">
+                 <label htmlFor="productDeliveryOptions">Product Delivery Options</label>
+                 </div>
+                 <div className="product-deliveryOptions-text">
+                    <input value="@productdeliveryoptions" @onchange="setProductDeliveryOption" />
+                 </div>
+                 </div>
  
+                 <div className="product-brandname">
+               <div className="product-brandname-label">
+                 <label htmlFor="productBrandName">Product Brand Name</label>
+                 </div>
+                 <div className="product-brandname-text">
+                    <input value="@productbrandname" @onchange="setProductBrandName" />
+                 </div>
+                 </div>
+                 <div className="product-modelNumber">
+               <div className="product-modelNumber-label">
+                 <label htmlFor="productModelNumber">Product Model Number</label>
+                 </div>
+                 <div className="product-modelNumber-text">
+                    <input value="@productmodelnumber" @onchange="setProductModelNumber" />
+                 </div>
+                 </div>
+                 <div className="product-discount">
+               <div className="product-discount-label">
+                 <label htmlFor="productDiscount">Product Discount</label>
+                 </div>
+                 <div className="product-discount-text">
+                    <input value="@productdiscount" @onchange="setProductDiscount" />
+                 </div>
+                 </div>
+                 <div className="product-countryofOrigin">
+               <div className="product-countryofOrigin-label">
+                 <label htmlFor="productCountryofOrigin">Product Country of Origin</label>
+                 </div>
+                 <div className="product-countryofOrigin-text">
+                    <input value="@productcountryoforigin" @onchange="setCountryOfOrigin" />
+                 </div>
+                 </div>           
+            </div>
          </form>
        </div>
     </div>
@@ -30,6 +132,26 @@
 
     private string? productname = "Product Name";
     private string? companyname = "Company Name";
+    private string? productcategory = "Product Category";
+    private string? licensetype = "Licence Type";
+    private string? productprice = "Product Price";
+    private string? productcurrency = "Product Currency";
+    private string? productquantity = "Product Quantity";
+
+    private string? productsupplier = "Product Supplier";
+
+    private string? productavailability = "Product Availability Status";
+
+    private string? productdeliveryoptions = "Product Delivery Options";
+
+    private string? productbrandname = "Product Brand Name";
+
+    private string? productmodelnumber = "Product Model Number";
+
+    private string? productdiscount = "Product Discount";
+
+    private string? productcountryoforigin = "Product Country of Origin";
+    
 
     private void IncrementCount()
     {
@@ -46,4 +168,60 @@
     {
         companyname = e.Value?.ToString();
     }
+
+    private void setProductCategory(ChangeEventArgs e)
+    {
+        productcategory = e.Value?.ToString();
+    }
+    private void setLicenseType(ChangeEventArgs e)
+    {
+        licensetype = e.Value?.ToString();
+    }
+    private void setProductPrice(ChangeEventArgs e)
+    {
+        productprice = e.Value?.ToString();
+    }
+    private void setProductCurrency(ChangeEventArgs e)
+    {
+        productcurrency = e.Value?.ToString();
+    }
+    private void setProductQuantity(ChangeEventArgs e)
+    {
+        productquantity = e.Value?.ToString();
+    }
+
+    private void setProductSupplier(ChangeEventArgs e)
+    {
+        productsupplier = e.Value?.ToString();
+    }
+
+    private void setProductAvailabilityStatus(ChangeEventArgs e)
+    {
+        productavailability = e.Value?.ToString();
+    }
+
+    private void setProductDeliveryOption(ChangeEventArgs e)
+    {
+        productdeliveryoptions = e.Value?.ToString();
+    }
+
+    private void setProductBrandName(ChangeEventArgs e)
+    {
+        productbrandname = e.Value?.ToString();
+    }
+
+    private void setProductModelNumber(ChangeEventArgs e)
+    {
+        productmodelnumber = e.Value?.ToString();
+    }
+    private void setProductDiscount(ChangeEventArgs e)
+    {
+        productdiscount = e.Value?.ToString();
+    }
+
+    private void setCountryOfOrigin(ChangeEventArgs e)
+    {
+        productcountryoforigin = e.Value?.ToString();
+    }
+
 }
