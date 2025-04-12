@@ -1,126 +1,126 @@
 @page "/product"
 
- <div className="ProductApp">
-       <div className="product-details-container">
-         <form className="product-details" onSubmit={handleSubmit}>
+ <div class="ProductApp">
+       <div class="product-details-container">
+         <form class="product-details" @onsubmit="HandleSubmit">
            <h1>Product Details</h1>
-           <div className="product-details-left">
-           <div className="product-name">
-               <div className="product-name-label">
+           <div class="product-details-left">
+           <div class="product-name">
+               <div class="product-name-label">
                  <label htmlFor="productName">Product Name</label>
                </div>
-               <div className="product-name-text">
-                <input value="@productname" @onchange="setProductName" />
+               <div class="product-name-text">
+                <input class="product-name" value="@productname" @onchange="setProductName" />
                </div>
              </div>           
  
-           <div className="company-name">
-               <div className="company-name-label">
+           <div class="company-name">
+               <div class="company-name-label">
                  <label htmlFor="companyName">Company Name</label>
                </div>
-               <div className="company-name-text">
-                <input value="@companyname" @onchange="setCompanyName" />
+               <div class="company-name-text">
+                <input class="company-name" value="@companyname" @onchange="setCompanyName" />
                </div>
             </div>
 
-            <div className="product-category">
-               <div className="product-category-label">
-                 <label htmlFor="productCategory">Product Category</label>
+            <div class="product-category">
+               <div class="product-category-label">
+                 <label htmlFor="productCategory">Category</label>
                </div>
-               <div className="product-category-text">
-                <input value="@productcategory" @onchange="setProductCategory" />
+               <div class="product-category-text">
+                <input class="product-category" value="@productcategory" @onchange="setProductCategory" />
                </div>
             </div>
-            <div className="Licence-Type">
-               <div className="Licence-Type-Label">
+            <div class="Licence-Type">
+               <div class="Licence-Type-Label">
                  <label htmlFor="LicenceType">Licence Type</label>
                </div>
-               <div className="Licence-Type-Text">
-                 <input value="@licensetype" @onchange="setLicenseType" />
+               <div class="Licence-Type-Text">
+                 <input class="license-type" value="@licensetype" @onchange="setLicenseType" />
                </div>
              </div>
-             <div className="product-price">
-               <div className="product-price-label">
-                 <label htmlFor="productPrice">Product Price</label>
+             <div class="product-price">
+               <div class="product-price-label">
+                 <label htmlFor="productPrice">Price</label>
                </div>
-               <div className="product-price-text">
-                 <input value="@productprice" @onchange="setProductPrice" />
-               </div>
-             </div>
-             <div className="product-currency">
-               <div className="product-currency-label">
-                 <label htmlFor="productCurrency">Product Currency</label>
-               </div>
-               <div className="product-currency-text">
-                 <input value="@productcurrency" @onchange="setProductCurrency" />
+               <div class="product-price-text">
+                 <input class="product-price" value="@productprice" @onchange="setProductPrice" />
                </div>
              </div>
-             <div className="product-quantity">
-               <div className="product-quantity-label">
-                 <label htmlFor="productQuantity">Product Quantity</label>
+             <div class="product-currency">
+               <div class="product-currency-label">
+                 <label htmlFor="productCurrency">Currency</label>
                </div>
-               <div className="product-quantity-text">
-                 <input value="@productquantity" @onchange="setProductQuantity" />
+               <div class="product-currency-text">
+                 <input class="product-currency" value="@productcurrency" @onchange="setProductCurrency" />
+               </div>
+             </div>
+             <div class="product-quantity">
+               <div class="product-quantity-label">
+                 <label htmlFor="productQuantity">Quantity</label>
+               </div>
+               <div class="product-quantity-text">
+                 <input class="product-quantity" value="@productquantity" @onchange="setProductQuantity" />
                </div>
              </div>
              </div>
 
-            <div className="product-details-right">
-                    <div className="product-supplier">
-               <div className="product-supplier-label">
-                 <label htmlFor="productSupplier">Product Supplier</label>
+            <div class="product-details-right">
+                    <div class="product-supplier">
+               <div class="product-supplier-label">
+                 <label htmlFor="productSupplier">Supplier</label>
                </div>
-               <div className="product-supplier-text">
-                 <input value="@productsupplier" @onchange="setProductSupplier" />
+               <div class="product-supplier-text">
+                 <input class="product-supplier" value="@productsupplier" @onchange="setProductSupplier" />
                </div>
                </div>
-               <div className="product-availabilitystatus">
-               <div className="product-availabilitystatus-label">
-                 <label htmlFor="productAvailabilityStatus">Product Availability Status</label>
+               <div class="product-availabilitystatus">
+               <div class="product-availabilitystatus-label">
+                 <label htmlFor="productAvailabilityStatus">Availability Status</label>
                  </div>
-                 <div className="product-availabilitystatus-text">
-                    <input value="@productavailability" @onchange="setProductAvailabilityStatus" />
+                 <div class="product-availabilitystatus-text">
+                    <input class="product-availabilitystatus" value="@productavailability" @onchange="setProductAvailabilityStatus" />
                  </div>
                  </div>
-                 <div className="product-deliveryOptions">
-               <div className="product-deliveryOptions-label">
-                 <label htmlFor="productDeliveryOptions">Product Delivery Options</label>
+                 <div class="product-deliveryOptions">
+               <div class="product-deliveryOptions-label">
+                 <label htmlFor="productDeliveryOptions">Delivery Options</label>
                  </div>
-                 <div className="product-deliveryOptions-text">
-                    <input value="@productdeliveryoptions" @onchange="setProductDeliveryOption" />
+                 <div class="product-deliveryOptions-text">
+                    <input class="product-deliveryoptions" value="@productdeliveryoptions" @onchange="setProductDeliveryOption" />
                  </div>
                  </div>
  
-                 <div className="product-brandname">
-               <div className="product-brandname-label">
-                 <label htmlFor="productBrandName">Product Brand Name</label>
+                 <div class="product-brandname">
+               <div class="product-brandname-label">
+                 <label htmlFor="productBrandName">Brand Name</label>
                  </div>
-                 <div className="product-brandname-text">
-                    <input value="@productbrandname" @onchange="setProductBrandName" />
-                 </div>
-                 </div>
-                 <div className="product-modelNumber">
-               <div className="product-modelNumber-label">
-                 <label htmlFor="productModelNumber">Product Model Number</label>
-                 </div>
-                 <div className="product-modelNumber-text">
-                    <input value="@productmodelnumber" @onchange="setProductModelNumber" />
+                 <div class="product-brandname-text">
+                    <input class="product-brandname" value="@productbrandname" @onchange="setProductBrandName" />
                  </div>
                  </div>
-                 <div className="product-discount">
-               <div className="product-discount-label">
-                 <label htmlFor="productDiscount">Product Discount</label>
+                 <div class="product-modelNumber">
+               <div class="product-modelNumber-label">
+                 <label htmlFor="productModelNumber">Model Number</label>
                  </div>
-                 <div className="product-discount-text">
-                    <input value="@productdiscount" @onchange="setProductDiscount" />
+                 <div class="product-modelNumber-text">
+                    <input class="product-modelnumber" value="@productmodelnumber" @onchange="setProductModelNumber" />
                  </div>
                  </div>
-                 <div className="product-countryofOrigin">
-               <div className="product-countryofOrigin-label">
-                 <label htmlFor="productCountryofOrigin">Product Country of Origin</label>
+                 <div class="product-discount">
+               <div class="product-discount-label">
+                 <label htmlFor="productDiscount">Discount</label>
                  </div>
-                 <div className="product-countryofOrigin-text">
-                    <input value="@productcountryoforigin" @onchange="setCountryOfOrigin" />
+                 <div class="product-discount-text">
+                    <input class="product-discount" value="@productdiscount" @onchange="setProductDiscount" />
+                 </div>
+                 </div>
+                 <div class="product-countryofOrigin">
+               <div class="product-countryofOrigin-label">
+                 <label htmlFor="productCountryofOrigin">Country of Origin</label>
+                 </div>
+                 <div class="product-countryofOrigin-text">
+                    <input class="product-countryoforigin" value="@productcountryoforigin" @onchange="setCountryOfOrigin" />
                  </div>
                  </div>           
             </div>
@@ -222,6 +222,11 @@
     private void setCountryOfOrigin(ChangeEventArgs e)
     {
         productcountryoforigin = e.Value?.ToString();
+    }
+
+    private void HandleSubmit()
+    {
+        Console.WriteLine("Form submitted!");
     }
 
 }
