@@ -1,0 +1,49 @@
+@page "/product"
+
+ <div className="ProductApp">
+       <div className="product-details-container">
+         <form className="product-details" onSubmit={handleSubmit}>
+           <h1>Product Details</h1>
+           <div className="product-name">
+               <div className="product-name-label">
+                 <label htmlFor="productName">Product Name</label>
+               </div>
+               <div className="product-name-text">
+                <input value="@productname" @onchange="setProductName" />
+               </div>
+             </div>           
+ 
+           <div className="company-name">
+               <div className="company-name-label">
+                 <label htmlFor="companyName">Company Name</label>
+               </div>
+               <div className="company-name-text">
+                <input value="@companyname" @onchange="setCompanyName" />
+               </div>
+            </div>
+ 
+         </form>
+       </div>
+    </div>
+@code {
+    private int currentCount = 0;
+
+    private string? productname = "Product Name";
+    private string? companyname = "Company Name";
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+
+    private void setProductName(ChangeEventArgs e)
+    {
+        productname = e.Value?.ToString();
+    }
+
+    
+    private void setCompanyName(ChangeEventArgs e)
+    {
+        companyname = e.Value?.ToString();
+    }
+}
