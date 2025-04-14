@@ -10,7 +10,7 @@
                  <label htmlFor="productName">Product Name</label>
                </div>
                <div class="product-name-text">
-                <input class="product-name" value="@productname" @onchange="setProductName" />
+                <input class="product-name" value="@productname" @onchange="setProductName" placeholder="Enter product name"/>
                </div>
              </div>           
  
@@ -19,7 +19,7 @@
                  <label htmlFor="companyName">Company Name</label>
                </div>
                <div class="company-name-text">
-                <input class="company-name" value="@companyname" @onchange="setCompanyName" />
+                <input class="company-name" value="@companyname" @onchange="setCompanyName" placeholder="Enter company name"/>
                </div>
             </div>
 
@@ -28,7 +28,7 @@
                  <label htmlFor="productCategory">Category</label>
                </div>
                <div class="product-category-text">
-                <input class="product-category" value="@productcategory" @onchange="setProductCategory" />
+                <input class="product-category" value="@productcategory" @onchange="setProductCategory" placeholder="Enter product category"/>
                </div>
             </div>
             <div class="Licence-Type">
@@ -36,7 +36,7 @@
                  <label htmlFor="LicenceType">Licence Type</label>
                </div>
                <div class="Licence-Type-Text">
-                 <input class="license-type" value="@licensetype" @onchange="setLicenseType" />
+                 <input class="license-type" value="@licensetype" @onchange="setLicenseType" placeholder="Enter license type"/>
                </div>
              </div>
              <div class="product-price">
@@ -44,7 +44,7 @@
                  <label htmlFor="productPrice">Price</label>
                </div>
                <div class="product-price-text">
-                 <input class="product-price" value="@productprice" @onchange="setProductPrice" />
+                 <input class="product-price" value="@productprice" @onchange="setProductPrice" placeholder="Enter the price"/>
                </div>
              </div>
              <div class="product-currency">
@@ -52,7 +52,7 @@
                  <label htmlFor="productCurrency">Currency</label>
                </div>
                <div class="product-currency-text">
-                 <input class="product-currency" value="@productcurrency" @onchange="setProductCurrency" />
+                 <input class="product-currency" value="@productcurrency" @onchange="setProductCurrency" placeholder="Select the currency"/>
                </div>
              </div>
              <div class="product-quantity">
@@ -60,7 +60,7 @@
                  <label htmlFor="productQuantity">Quantity</label>
                </div>
                <div class="product-quantity-text">
-                 <input class="product-quantity" value="@productquantity" @onchange="setProductQuantity" />
+                 <input class="product-quantity" value="@productquantity" @onchange="setProductQuantity" placeholder="Enter the quantity"/>
                </div>
              </div>
              </div>
@@ -71,7 +71,7 @@
                  <label htmlFor="productSupplier">Supplier</label>
                </div>
                <div class="product-supplier-text">
-                 <input class="product-supplier" value="@productsupplier" @onchange="setProductSupplier" />
+                 <input class="product-supplier" value="@productsupplier" @onchange="setProductSupplier" placeholder="Enter supplier name"/>
                </div>
                </div>
                <div class="product-availabilitystatus">
@@ -79,7 +79,7 @@
                  <label htmlFor="productAvailabilityStatus">Availability Status</label>
                  </div>
                  <div class="product-availabilitystatus-text">
-                    <input class="product-availabilitystatus" value="@productavailability" @onchange="setProductAvailabilityStatus" />
+                    <input class="product-availabilitystatus" value="@productavailability" @onchange="setProductAvailabilityStatus" placeholder="Select availability Status"/>
                  </div>
                  </div>
                  <div class="product-deliveryOptions">
@@ -87,7 +87,7 @@
                  <label htmlFor="productDeliveryOptions">Delivery Options</label>
                  </div>
                  <div class="product-deliveryOptions-text">
-                    <input class="product-deliveryoptions" value="@productdeliveryoptions" @onchange="setProductDeliveryOption" />
+                    <input class="product-deliveryoptions" value="@productdeliveryoptions" @onchange="setProductDeliveryOption" placeholder="Select delivery option"/>
                  </div>
                  </div>
  
@@ -96,7 +96,7 @@
                  <label htmlFor="productBrandName">Brand Name</label>
                  </div>
                  <div class="product-brandname-text">
-                    <input class="product-brandname" value="@productbrandname" @onchange="setProductBrandName" />
+                    <input class="product-brandname" value="@productbrandname" @onchange="setProductBrandName" placeholder="Select brand name"/>
                  </div>
                  </div>
                  <div class="product-modelNumber">
@@ -104,7 +104,7 @@
                  <label htmlFor="productModelNumber">Model Number</label>
                  </div>
                  <div class="product-modelNumber-text">
-                    <input class="product-modelnumber" value="@productmodelnumber" @onchange="setProductModelNumber" />
+                    <input class="product-modelnumber" value="@productmodelnumber" @onchange="setProductModelNumber" placeholder="Select model number"/>
                  </div>
                  </div>
                  <div class="product-discount">
@@ -112,7 +112,7 @@
                  <label htmlFor="productDiscount">Discount</label>
                  </div>
                  <div class="product-discount-text">
-                    <input class="product-discount" value="@productdiscount" @onchange="setProductDiscount" />
+                    <input class="product-discount" value="@productdiscount" @onchange="setProductDiscount" placeholder="Enter the discount"/>
                  </div>
                  </div>
                  <div class="product-countryofOrigin">
@@ -120,7 +120,7 @@
                  <label htmlFor="productCountryofOrigin">Country of Origin</label>
                  </div>
                  <div class="product-countryofOrigin-text">
-                    <input class="product-countryoforigin" value="@productcountryoforigin" @onchange="setCountryOfOrigin" />
+                    <input class="product-countryoforigin" value="@productcountryoforigin" @onchange="setCountryOfOrigin" placeholder="Select the country Of Origin"/>
                  </div>
                  </div>           
             </div>
@@ -130,27 +130,27 @@
 @code {
     private int currentCount = 0;
 
-    private string? productname = "Product Name";
-    private string? companyname = "Company Name";
-    private string? productcategory = "Product Category";
-    private string? licensetype = "Licence Type";
-    private string? productprice = "Product Price";
-    private string? productcurrency = "Product Currency";
-    private string? productquantity = "Product Quantity";
+    private string? productname = "";
+    private string? companyname = "";
+    private string? productcategory = "";
+    private string? licensetype = "";
+    private string? productprice = "";
+    private string? productcurrency = "";
+    private string? productquantity = "";
 
-    private string? productsupplier = "Product Supplier";
+    private string? productsupplier = "";
 
-    private string? productavailability = "Product Availability Status";
+    private string? productavailability = "";
 
-    private string? productdeliveryoptions = "Product Delivery Options";
+    private string? productdeliveryoptions = "";
 
-    private string? productbrandname = "Product Brand Name";
+    private string? productbrandname = "";
 
-    private string? productmodelnumber = "Product Model Number";
+    private string? productmodelnumber = "";
 
-    private string? productdiscount = "Product Discount";
+    private string? productdiscount = "";
 
-    private string? productcountryoforigin = "Product Country of Origin";
+    private string? productcountryoforigin = "";
     
 
     private void IncrementCount()
